@@ -1,0 +1,31 @@
+{
+  "name": "standard-sass",
+  "version": "0.0.1",
+  "description": "standard sass linter",
+  "main": "dist/sass-lint.js",
+  "scripts": {
+    "build": "node build.js",
+    "test": "npm run build"
+  },
+  "bin": {
+    "standard-sass":  "dist/sass-cli.js",
+    "ssass":  "dist/sass-cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jetiny/standard-sass.git"
+  },
+  "author": {
+    "name": "jetiny",
+    "email": "86287344@qq.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jetiny/standard-sass/issues"
+  },
+  "devDependencies": {
+    "rollup-standalone": "^0.42.3",
+    "sass-lint": "^1.10.2"
+  },
+  "homepage": "https://github.com/jetiny/standard-sass#readme"
+}

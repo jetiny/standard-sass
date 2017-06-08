@@ -1,0 +1,111 @@
+#把.sass-lint.yml放入项目
+#在下面files:
+#include: 'sass/*.sass' <==写好指向文件
+#终端输入sass-lint -v -q -s sass
+
+options:
+  formatter: stylish
+files:
+  include: '**/*.s+(a|c)ss'
+rules:
+
+# 命名规则 Name Formats
+  class-name-format: 0  # 小写+中划线
+  id-name-format: 0              # 小写+下划线
+    # - 0 # 严格模式
+    # - 
+    #   allow-leading-underscore: false
+    #   convention: 'snakecase'
+# 字符串相关
+  attribute-quotes: 1                       # 字符串必须使用单引号
+  quotes: 1                                 # 字符串必须使用单引号
+  url-quotes: 0                             # 字符串必须使用单引号
+# 空行 Line Spacing
+  one-declaration-per-line: 1
+  empty-line-between-blocks: 0
+  single-line-per-selector: 0               # 每个选择器单行
+# sass 部分 全部小写+中划线
+  mixin-name-format: 1
+  placeholder-name-format: 1
+  function-name-format: 1
+  variable-name-format: 0
+  # Extends
+  extends-before-mixins: 1
+  extends-before-declarations: 1
+  placeholder-in-extend: 0
+  # Mixins
+  mixins-before-declarations: 0            #混合之前必须先声明
+
+# 控制选项
+  no-color-literals: 0                     # 强制要求颜色为变量 默认 1
+  no-css-comments: 0                       # 是否开启多行注释
+  no-ids: 0                                # 允许用ID选择器
+  no-qualifying-elements: 0                # 是否开启标签元素附带类或属性 如 div.foo 默认 1
+  no-vendor-prefixes: 0                    # 是否禁用 -webkit- 等前缀
+
+# 临近换行 Nesting
+  declarations-before-nesting: 0          #声明应先于嵌套
+  force-attribute-nesting: 0              # 属性(同下)
+  force-element-nesting: 0                # 兄弟关系必须换行 如 ul\n\t&.nav 不能是 ul.nav 默认 1
+  force-pseudo-nesting: 0                 # 伪元素(同上)
+
+# 空格 Inner Spacing
+  space-after-comma: 1                      #默认在逗号之前一定有空格
+  space-before-colon: 1                     #默认冒号之前不含有空格
+  space-after-colon: 1                      #默认冒号之后含有空格
+  space-before-brace: 1                     #在括号之前含有空格
+  space-before-bang: 1                      #在！前可含有空格
+  space-after-bang: 1                       #在！后可含有空格
+  space-between-parens: 1                   #强制在括号（()）内的第一个项目之前和最后一个项目之后可以包含空格
+  space-around-operator: 1                  #在运算符前可含有空格
+
+# 颜色
+  hex-length: 0                             # 颜色值是否为缩写 style: short/long (defaults to short)
+  hex-notation: 0                           # 颜色值应大小写  lowercase/uppercase (defaults to lowercase)
+  leading-zero: 0                           # 允许 .5 和 0.5 两种写法
+  nesting-depth: 0                          # 子级深度层次个数 默认2 
+  property-sort-order: 0                    # 强制规定属性顺序 默认 1
+  no-color-keywords: 0                      # 允许使用颜色关键字
+  no-color-hex: 0                           # 允许十六进制书写颜色
+
+# 其他
+  no-url-domains: 0                        #将强制域不在网址中使用
+  no-url-protocols: 0                      #强制不在URL中使用协议和域
+
+########### 未处理,使用默认值
+  # Disallows
+  no-attribute-selectors: 0                #将警告使用属性选择器
+  no-combinators: 0                        #不使用 > ~ +               
+  no-debug: 1
+  no-disallowed-properties: 0              #警告某些属性的使用
+  no-duplicate-properties: 0               #不允许在同一块中使用重复属性
+  no-empty-rulesets: 1                     #强制规则集不为空
+  no-extends: 0
+  no-important: 0                          #！important是否允许使用
+  no-invalid-hex: 1                        #提示16进制书写错误
+  no-mergeable-selectors: 0                #相同选择器他们的属性的合并
+  no-misspelled-properties: 1              #属性书写错误（默认1为提示错误）
+  no-trailing-whitespace: 1                #不允许行尾空格
+  no-trailing-zero: 1                      #不允许已零结尾 如:4.0
+  no-transition-all: 0                     #transition：all 2 s ;可以使用
+  no-universal-selectors: 0                #不允许不同地方多次书写一个选择器
+  no-warn: 1                               #警告
+  property-units: 0                        #单位使用限定px,rem，em...
+
+  # Style Guide
+  bem-depth: 0
+  border-zero: 1                           #若无border值则为0
+  brace-style: 1                           #{}书写可在一行
+  clean-import-paths: 0                    #不加加扩展名根路径不加_
+  empty-args: 1                            #如果没有参数被定义或使用,当include或调用mixin加();
+  indentation: 1                           #tab===2spaces
+  max-line-length: 0                       #一行不超过（默认80）
+  max-file-line-count: 0                   #文件内容做多（默认300）
+  pseudo-element: 1                        #伪元素要以双冒号开头。伪类元素以单冒号开头
+  shorthand-values: 1                      #表达简洁
+  variable-for-property: 1                 #将强制使用指定属性的值的变量
+  zero-unit: 1                             #0用于长度值无单位
+
+  # Final Items
+  trailing-semicolon: 0                  #强制块中的最后一个声明应该包含分号
+  final-newline: 0                       #强制文件是否应以换行符结尾
