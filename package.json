@@ -1,10 +1,10 @@
 {
   "name": "standard-sass",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "standard sass linter",
   "main": "dist/sass-lint.js",
   "scripts": {
-    "build": "node build.js",
+    "build": "node scripts/build.js && node scripts/build-cli.js",
     "test": "npm run build"
   },
   "bin": {
@@ -24,7 +24,7 @@
     "url": "https://github.com/jetiny/standard-sass/issues"
   },
   "devDependencies": {
-    "rollup-standalone": "^0.42.3",
+    "rollup-standalone": "^0.42.4",
     "sass-lint": "^1.10.2"
   },
   "homepage": "https://github.com/jetiny/standard-sass#readme"
