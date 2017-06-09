@@ -5,7 +5,7 @@ executeRollup({
   entry: require.resolve('sass-lint/bin/sass-lint.js'),
   dest: 'dist/sass-cli.js',
   format: 'cjs',
-  // uglifyOptions: true,
+  uglifyOptions: true,
   patterns: [
     {
       match: /sass\-lint\.js/,

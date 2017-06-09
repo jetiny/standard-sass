@@ -25,7 +25,7 @@ executeRollup({
   entry: require.resolve('sass-lint'),
   dest: 'dist/sass-lint.js',
   format: 'cjs',
-  // uglifyOptions: true,
+  uglifyOptions: true,
   patterns: [
     {
       test: `'eslint/lib/formatters/' + format`,
