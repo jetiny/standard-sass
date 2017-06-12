@@ -33,6 +33,16 @@ executeRollup({
   program.verbose = true;
   detectPattern(null, config);
 `
+    },
+    {
+      match: /sass\-lint\.js/,
+      test: `lint.failOnError(detects, configOptions, configPath);`,
+      replace: ` try {
+          lint.failOnError(detects, configOptions, configPath);
+        } catch (err) {
+          console.error('sass-lint fail.')
+          process.exit(1)
+        }`
     }
   ]
 }, (bundle, res) => {
