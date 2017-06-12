@@ -28,7 +28,7 @@ executeRollup({
     },
     {
       match: /sass\-lint\.js/,
-      test: `detectPattern(null, config);`
+      test: `detectPattern(null, config);`,
       replace: `program.exit = true;
   program.verbose = true;
   detectPattern(null, config);
