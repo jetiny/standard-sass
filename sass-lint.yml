@@ -6,7 +6,9 @@
 options:
   formatter: stylish
 files:
-  include: '**/*.s+(a|c)ss'
+  include: 'sass/**/*.s+(a|c)ss'
+  ignore:
+    - 'node_modules'
 rules:
 
 # 命名规则 Name Formats
