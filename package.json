@@ -1,6 +1,6 @@
 {
   "name": "standard-sass",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "standard sass linter",
   "main": "dist/sass-lint.js",
   "scripts": {
@@ -8,8 +8,8 @@
     "test": "npm run build"
   },
   "bin": {
-    "standard-sass":  "dist/sass-cli.js",
-    "ssass":  "dist/sass-cli.js"
+    "standard-sass": "dist/sass-cli.js",
+    "ssass": "dist/sass-cli.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
     "url": "https://github.com/jetiny/standard-sass/issues"
   },
   "devDependencies": {
-    "rollup-standalone": "^0.42.4",
+    "rollup-standalone": "^0.42.9",
     "sass-lint": "^1.10.2"
   },
   "homepage": "https://github.com/jetiny/standard-sass#readme"
