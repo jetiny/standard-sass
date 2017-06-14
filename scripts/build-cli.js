@@ -3,7 +3,7 @@ const pkg = require('../package.json')
 
 executeRollup({
   entry: require.resolve('sass-lint/bin/sass-lint.js'),
-  dest: 'dist/sass-cli.js',
+  dest: 'dist/standard-sass.js',
   format: 'cjs',
   uglifyOptions: true,
   patterns: [
@@ -32,6 +32,17 @@ executeRollup({
       replace: `program.exit = true;
   program.verbose = true;
   detectPattern(null, config);
+`
+    },
+    {
+      match: /sass\-lint\.js/,
+      test: `detectPattern(path, config);`,
+      replace: `
+  if (process.argv.length === 3) {
+    program.exit = true;
+    program.verbose = true;
+  }
+  detectPattern(path, config);
 `
     },
     {

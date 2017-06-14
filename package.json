@@ -1,6 +1,6 @@
 {
   "name": "standard-sass",
-  "version": "0.0.6",
+  "version": "1.0.6",
   "description": "standard sass linter",
   "main": "dist/sass-lint.js",
   "scripts": {
@@ -8,8 +8,8 @@
     "test": "npm run build"
   },
   "bin": {
-    "standard-sass": "dist/sass-cli.js",
-    "ssass": "dist/sass-cli.js"
+    "standard-sass": "dist/standard-sass.js",
+    "ssass": "dist/standard-sass.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,13 @@
     "name": "jetiny",
     "email": "86287344@qq.com"
   },
+  "keywords": [
+    "sass",
+    "scss",
+    "standard",
+    "linter",
+    "lint"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jetiny/standard-sass/issues"
