@@ -18,7 +18,10 @@ This will install `standard-sass` globally so that it may be run from the comman
 
 ### Usage:
 
-    ssass -h  // (same as standard-sass)
+    ssass <sass-path-pattern> [options]
+The default `<sass-path-pattern>` is `sass/**/*.s+(a|c)ss`
+
+The default `[options]` is `-q -v`
 
 ```js
   Usage: standard-sass [options] <pattern>
