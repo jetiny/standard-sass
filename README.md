@@ -6,7 +6,7 @@
 [![Build Status](https://travis-ci.org/jetiny/standard-sass.svg?branch=master)](https://travis-ci.org/jetiny/standard-sass)
 [![License](https://img.shields.io/github/license/indexzero/http-server.svg?style=flat-square)](https://github.com/indexzero/http-server)
 
-`standard-sass` is a simple, zero-configuration, `standalone`(Independent) command-line sass style linter (use [sass-lint](https://www.npmjs.com/package/sass-lint))  like [standard-js](https://standardjs.com).
+`standard-sass` is a simple, zero-configuration, `standalone`(Independent) command-line sass(css) style linter (use [sass-lint](https://www.npmjs.com/package/sass-lint))  like [standard-js](https://standardjs.com).
 
 ### Installing globally:
 
@@ -19,7 +19,7 @@ This will install `standard-sass` globally so that it may be run from the comman
 ### Usage:
 
     ssass <sass-path-pattern> [options]
-The default `<sass-path-pattern>` is `sass/**/*.s+(a|c)ss`
+The default `<sass-path-pattern>` is `s+(a|c)ss/**/*.s+(a|c)ss` and `css/**/*.css`
 
 The default `[options]` is `-q -v`
 

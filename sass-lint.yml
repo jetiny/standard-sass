@@ -6,9 +6,12 @@
 options:
   formatter: stylish
 files:
-  include: 'sass/**/*.s+(a|c)ss'
+  include:
+    - 's+(a|c)ss/**/*.s+(a|c)ss'
+    - 'css/**/*.css'
   ignore:
     - 'node_modules'
+    - 'dist'
 rules:
 
 # 命名规则 Name Formats
@@ -19,9 +22,9 @@ rules:
     #   allow-leading-underscore: false
     #   convention: 'snakecase'
 # 字符串相关
-  attribute-quotes: 1                       # 字符串必须使用单引号
-  quotes: 1                                 # 字符串必须使用单引号
-  url-quotes: 0                             # 字符串必须使用单引号
+  attribute-quotes: 0                       # 引号可以是单引号或双引号, 因为 css默认是双信号
+  quotes: 0                                 # 引号可以是单引号或双引号, 因为 css默认是双信号
+  url-quotes: 0                             # 引号可以是单引号或双引号, 因为 css默认是双信号
 # 空行 Line Spacing
   one-declaration-per-line: 1
   empty-line-between-blocks: 0
